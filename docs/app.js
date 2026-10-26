@@ -10,7 +10,6 @@ const profile = {
   address: "8F Shin-Otemachi Building, 2-2-1 Otemachi, Chiyoda-ku, Tokyo, 100-0004 Japan"
 };
 
-const card = document.querySelector("#card");
 const backgroundVideo = document.querySelector("#background-video");
 const playGate = document.querySelector("#play-gate");
 const button = document.querySelector("#save-contact");
@@ -37,11 +36,9 @@ async function playBackground() {
 playGate.addEventListener("click", playBackground);
 playBackground();
 
-window.setTimeout(() => card.classList.add("is-revealing"), 1450);
-window.setTimeout(() => card.classList.add("is-ready"), 2050);
 window.setTimeout(() => {
   if (backgroundVideo.paused) playGate.hidden = false;
-}, 2150);
+}, 900);
 
 button.addEventListener("pointerdown", (event) => {
   const rect = button.getBoundingClientRect();
