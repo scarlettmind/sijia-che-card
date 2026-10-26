@@ -3,30 +3,27 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
-  <meta name="theme-color" content="#061a36">
+  <meta name="theme-color" content="#071f47">
   <meta name="description" content="Sijia Che — Business Development Department at airweave inc.">
   <title>Sijia Che — airweave</title>
-  <link rel="preload" href="assets/airfiber-bg.jpg" as="image" fetchpriority="high">
+  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <link rel="preload" href="assets/airweave-loop-mobile.mp4" as="video" media="(max-width:700px) and (orientation:portrait)" type="video/mp4">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <main class="card" aria-label="Sijia Che digital business card">
-    <div class="background" aria-hidden="true"></div>
-    <div class="flow flow-a" aria-hidden="true"></div>
-    <div class="flow flow-b" aria-hidden="true"></div>
-    <div class="shade" aria-hidden="true"></div>
+  <main class="card" id="card" aria-label="Sijia Che digital business card">
+    <video class="background-video" id="background-video" muted playsinline loop preload="auto" poster="assets/airfiber-bg.jpg" disablepictureinpicture aria-hidden="true">
+      <source media="(max-width:700px) and (orientation:portrait)" src="assets/airweave-loop-mobile.mp4" type="video/mp4">
+      <source src="assets/airweave-loop.mp4" type="video/mp4">
+    </video>
+    <div class="video-shade" aria-hidden="true"></div>
 
     <section class="intro" aria-hidden="true">
-      <div class="fiber-mark">
-        <svg class="fibers" viewBox="0 0 520 160" role="presentation">
-          <path d="M22 92C112 18 173 137 259 79S408 25 498 78" />
-          <path d="M25 111C117 36 190 151 276 91S414 42 494 60" />
-          <path d="M32 68C125 6 182 115 248 66S393 8 488 91" />
-        </svg>
-        <img src="assets/airweave-logo.png" alt="">
-      </div>
+      <div class="intro-glow"></div>
+      <img class="launch-logo" src="assets/airweave-logo.png" alt="">
     </section>
 
+    <button class="play-gate" id="play-gate" type="button" hidden><i></i>TAP TO PLAY</button>
     <header class="brand"><img src="assets/airweave-logo.png" alt="airweave"></header>
 
     <section class="content">
@@ -36,7 +33,7 @@
       </div>
       <button class="save" type="button" id="save-contact">
         <span>SAVE CONTACT</span>
-        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v15m0 0-5-5m5 5 5-5"/></svg>
+        <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v15m0 0-5-5m5 5 5-5"></path></svg>
         <i class="ripple" aria-hidden="true"></i>
       </button>
     </section>
